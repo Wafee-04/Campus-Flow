@@ -1,0 +1,176 @@
+title Entity Relationship Diagram
+user[color: blue]{
+  user_id string pk
+  user_name string 
+  email string
+  password_hash string
+  role_id string fk
+  department_id string fk
+  account_status string
+}
+roles[color: green]{
+  role_id string pk
+  role_name string
+}
+faculty[color:  white]{
+  faculty_id string pk
+  faculty_name string 
+
+}
+department[color: orange]{
+  department_id string pk
+  faculty_id string fk
+  department_name string 
+}
+clubs[color: green]{
+  club_id string pk
+  club_name string 
+  club_description string
+  contact_email string
+}
+clubMemberships[color: orange]{
+  membership_id string pk
+  user_id string fk
+  club_id string fk
+  membership_role string
+  join_date timestamp
+  (user_id, club_id) unique
+}
+announcements[color: green]{
+  announcement_id string pk
+  announcement_title string
+  announcement_catagory string
+  publication_date timestamp
+  announcement_content string
+  announcement_status string
+  author_id string fk
+}
+announcementAudience {
+    announcement_id string PK, FK
+    role_id string PK, FK
+}
+building[color: black]{
+  building_id string pk
+  building_name string
+}
+rooms[color: orange]{
+  room_id string pk
+  building_id string fk
+  floor integer
+  capacity integer
+  room_type string
+  status string
+}
+reservations[color: magenta]{
+  reservation_id string pk
+  room_id string fk
+  user_id string fk
+  reservation_date timestamp
+  start_time timestamp
+  end_time timestamp
+  purpose string
+  reservation_status string
+}
+events[color: purple]{
+  event_id string pk
+  event_title string
+  room_id string fk
+  organizer_id string fk
+  event_details string
+  event_date timestamp
+  event_start timestamp
+  event_end timestamp
+  event_location string
+  registration_deadline timestamp
+  registration_capacity integer
+}
+eventRegistration[color: cyan]{
+  registration_id string pk
+  event_id string fk 
+  user_id string fk 
+  registration_date timestamp
+  registration_status string
+  (event_id, user_id) unique
+}
+
+complaints {
+  complaint_id string PK
+  submitted_by string FK
+  faulty_room string FK
+  assigned_staff_id string FK
+  complaint_description string
+  complaint_status string
+  category string
+  submission_date timestamp
+  resolution_notes string
+  resolved_at timestamp
+}
+
+lost&found[color: white]{
+  lf_id string pk
+  report_type string
+  reported_by strign fk
+  item_name string
+  item_description string
+  location string
+  lf_date timestamp
+  status string
+}
+notifications[color: yellow]{
+  notification_id string pk
+  user_id string fk
+  notification_message string
+  created_at timestamp
+  is_read string
+}
+campus_facility[color: red]{
+  facility_id string pk
+  building_id string fk
+  f_floor string
+  f_room string
+  f_name string  
+  f_contact string
+}
+
+
+FacilityOpeningHours{
+    opening_hours_id string pk
+    facility_id string fk
+    day_of_week string
+    opens_at timestamp
+    closes_at timestamp
+}
+    
+
+
+
+faculty.faculty_id < department.faculty_id
+department.department_id < user.department_id
+building.building_id < rooms.building_id
+building.building_id < campus_facility.building_id
+campus_facility.facility_id < FacilityOpeningHours.facility_id
+
+
+user.user_id < complaints.submitted_by 
+user.user_id - complaints.assigned_staff_id
+rooms.room_id - complaints.faulty_room
+
+announcements.announcement_id < announcementAudience.announcement_id
+roles.role_id < announcementAudience.role_id
+
+
+
+user.user_id < clubMemberships.user_id
+clubs.club_id < clubMemberships.club_id
+roles.role_id - user.role_id
+user.user_id < notifications.user_id
+user.user_id > eventRegistration.user_id
+user.user_id < lost&found.reported_by
+user.user_id < announcements.author_id
+user.user_id < events.organizer_id
+user.user_id - reservations.user_id
+rooms.room_id - reservations.room_id
+
+events.event_id < eventRegistration.event_id
+user.user_id < eventRegistration.user_id
+
