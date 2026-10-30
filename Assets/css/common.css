@@ -1,0 +1,52 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/*Design variables*/
+:root{
+    --primary-color: #173B70;
+    --accent-color: #256EB;
+
+    --background-color: #F4F7FB;
+    --white: #FFFFFF;
+
+    --text-color: #1F2937;
+    --secondary-text: #64748B;
+
+    --border-color: #E2E8F0;
+
+    --success-color: #16A34A;
+    --danger-color: #DC2626;
+
+    --font-family: 'Inter', sans-serif;
+}
+
+/*basic reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body*/
+body{
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/*common button*/
+.btn-primary{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-primary:hover{
+    background-color: var(--accent-color);
+}
