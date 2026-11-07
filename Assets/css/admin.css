@@ -1,0 +1,154 @@
+body {
+    display: flex;
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+    width: 250px;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.sidebar-brand {
+    padding: 24px;
+    color: var(--white);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-brand h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.sidebar-nav {
+    padding: 20px 12px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 8px;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2sec ease;
+}
+
+.sidebar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-nav a.active {
+    background-color: var(--accent-color);
+    font-weight: 600;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 16px 30px;
+    min-height: 80px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.topbar-left h1 {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.topbar-left p {
+    font-size: 14px;
+    color: var(--secondary-text);
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-btn {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-profile {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.welcome-section {
+    margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.welcome-section p {
+    color: var(--secondary-text);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--white);
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: var(--secondary-text);
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 12px;
+}
+.dashboard-container {
+    background-color: var(--background-color);
+    flex: 1;
+}
+
+@media (max-width: 1000px){
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+}
