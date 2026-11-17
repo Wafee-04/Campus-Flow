@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Flow | Student Dashboard</title>
+  <link rel="stylesheet" href="../../Assets/css/common.css">
+  <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <h2>Campus Flow</h2>
+        <p>Student Portal</p>
+      </div>
+
+      <nav class="side-nav" aria-label="Student navigation">
+        <a class="nav-link active" href="index.html">Dashboard</a>
+        <a class="nav-link" href="pages/announcements.html">Announcements</a>
+        <a class="nav-link" href="pages/clubs.html">Clubs</a>
+        <a class="nav-link" href="pages/events.html">Events</a>
+        <a class="nav-link" href="pages/facilities-rooms.html">Facilities &amp; Rooms</a>
+        <a class="nav-link" href="pages/reservations.html">Reservations</a>
+        <a class="nav-link" href="pages/complaints.html">Complaints</a>
+        <a class="nav-link" href="pages/lost-found.html">Lost &amp; Found</a>
+        <a class="nav-link profile-link" href="../common/profile.html">My profile</a>
+        <a class="nav-link logout-link" href="../index.html">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <h1>Student Dashboard</h1>
+        <div class="topbar-actions">
+          <button class="notification-button" id="notificationButton" type="button">Notifications</button>
+          <span class="role-badge">Student</span>
+          <div class="notification-popover" id="notificationPopover" hidden>
+            <h3>Notifications</h3>
+            <p>Registration for Tech Fest is Open</p>
+            <p>Campus maintenance schedule updated</p>
+            <p>Club membership applications are open</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="dashboard-content">
+        <div class="welcome">
+          <h2>Welcome back, Student!</h2>
+          <p>Here’s what’s happening around your campus.</p>
+        </div>
+
+        <section class="stats-grid" aria-label="Student summary">
+          <article class="stat-card">
+            <p>Registered Events</p>
+            <strong>03</strong>
+          </article>
+          <article class="stat-card">
+            <p>Club Memberships</p>
+            <strong>02</strong>
+          </article>
+          <article class="stat-card">
+            <p>Pending Reservations</p>
+            <strong>01</strong>
+          </article>
+          <article class="stat-card">
+            <p>Active Complaints</p>
+            <strong>02</strong>
+          </article>
+        </section>
+
+        <section class="information-grid">
+          <article class="info-card">
+            <h3>Upcoming Events</h3>
+            <ul>
+              <li>Tech Fest 2026</li>
+              <li>Programming Contest</li>
+              <li>Cultural Night</li>
+            </ul>
+          </article>
+          <article class="info-card">
+            <h3>Recent Announcements</h3>
+            <ul>
+              <li>Registration for Tech Fest is Open</li>
+              <li>Campus maintenance schedule updated</li>
+              <li>Club membership applications are open</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="quick-access">
+          <h3>Quick Access</h3>
+          <div class="quick-grid">
+            <a class="quick-card" href="pages/clubs.html">Browse<br>Clubs</a>
+            <a class="quick-card" href="pages/events.html">Explore<br>Events</a>
+            <a class="quick-card" href="pages/facilities-rooms.html">Reserve a<br>Room</a>
+            <a class="quick-card" href="pages/complaints.html">Submit a<br>Complaint</a>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="js/student.js"></script>
+</body>
+</html>
