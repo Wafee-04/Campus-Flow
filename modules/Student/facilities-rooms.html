@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Flow | Facilities &amp; Rooms</title>
+<link rel="stylesheet" href="css/student.css">
+<link rel="stylesheet" href="css/facilities.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+<div class="brand"><h2>Campus Flow</h2><p>Student Portal</p></div>
+<nav class="side-nav" aria-label="Student navigation">
+<a class="nav-link" href="index.html">Dashboard</a>
+<a class="nav-link" href="announcements.html">Announcements</a>
+<a class="nav-link" href="clubs.html">Clubs</a>
+<a class="nav-link" href="events.html">Events</a>
+<a class="nav-link active" href="facilities-rooms.html">Facilities &amp; Rooms</a>
+<a class="nav-link" href="reservations.html">Reservations</a>
+<a class="nav-link" href="complaints.html">Complaints</a>
+<a class="nav-link" href="lost-found.html">Lost &amp; Found</a>
+<a class="nav-link profile-link" href="../../../common/profile.html">My profile</a>
+<a class="nav-link logout-link" href="../../../index.html">Logout</a>
+</nav></aside>
+<main class="main-area">
+<header class="topbar"><h1>Facilities &amp; Rooms</h1><div class="topbar-actions">
+<button class="notification-button" id="notificationButton" type="button">Notifications</button><span class="role-badge">Student</span>
+<div class="notification-popover" id="notificationPopover" hidden><h3>Notifications</h3><p>Registration for Tech Fest is Open</p><p>Campus maintenance schedule updated</p><p>Club membership applications are open</p></div>
+</div></header>
+<section class="dashboard-content facilities-content">
+<div class="facilities-heading"><h2>Explore Campus Facilities</h2><p>Find campus facilities and check room information, availability and operating hours.</p></div>
+<div class="facility-summary">
+<article class="facility-stat"><span class="stat-icon">⌂</span><div><strong id="totalCount">06</strong><span>Facilities &amp; Rooms</span></div></article>
+<article class="facility-stat"><span class="stat-icon">✓</span><div><strong id="availableCount">04</strong><span>Currently Available</span></div></article>
+<article class="facility-stat"><span class="stat-icon">◷</span><div><strong>08:00 AM – 08:00 PM</strong><span>Typical Campus Hours</span></div></article>
+</div>
+<div class="facilities-toolbar">
+<label class="facility-search" for="facilitySearch"><span>⌕</span><input id="facilitySearch" type="search" placeholder="Search facilities or rooms..."></label>
+<select id="buildingFilter" aria-label="Filter by building"><option value="all">All Buildings</option><option value="building-a">Building A</option><option value="building-b">Building B</option><option value="building-c">Building C</option></select>
+<select id="availabilityFilter" aria-label="Filter by availability"><option value="all">All Availability</option><option value="available">Available</option><option value="unavailable">Unavailable</option></select>
+</div>
+<div class="section-heading"><div><h3>Campus Facilities</h3><p id="resultsText">Showing all facilities</p></div></div>
+<div class="facilities-grid" id="facilitiesGrid">
+<article class="facility-card" data-building="building-a" data-status="available" data-search="central library study reading books building a"><div class="card-top"><span class="facility-icon">▤</span><span class="status available">Available</span></div><small>Learning &amp; Study</small><h3>Central Library</h3><p>A quiet place for reading, individual study and academic resources.</p><div class="facility-meta"><span>⌖ Building A</span><span>◷ 08:00 AM – 08:00 PM</span></div><button data-detail="library" type="button">View Details <span>→</span></button></article>
+<article class="facility-card" data-building="building-b" data-status="available" data-search="computer lab laboratory computers building b"><div class="card-top"><span class="facility-icon">▣</span><span class="status available">Available</span></div><small>Academic</small><h3>Computer Lab</h3><p>Computer laboratory for practical classes and academic activities.</p><div class="facility-meta"><span>⌖ Building B</span><span>◷ 08:00 AM – 06:00 PM</span></div><button data-detail="computer-lab" type="button">View Details <span>→</span></button></article>
+<article class="facility-card" data-building="building-c" data-status="unavailable" data-search="seminar room presentation meeting building c"><div class="card-top"><span class="facility-icon">▥</span><span class="status unavailable">Unavailable</span></div><small>Meeting &amp; Events</small><h3>Seminar Room</h3><p>Room for academic presentations, seminars and group discussions.</p><div class="facility-meta"><span>⌖ Building C</span><span>◷ 09:00 AM – 05:00 PM</span></div><button data-detail="seminar-room" type="button">View Details <span>→</span></button></article>
+<article class="facility-card" data-building="building-a" data-status="available" data-search="student lounge common room relaxation building a"><div class="card-top"><span class="facility-icon">☕</span><span class="status available">Available</span></div><small>Student Space</small><h3>Student Lounge</h3><p>A shared space for students to relax and spend time between classes.</p><div class="facility-meta"><span>⌖ Building A</span><span>◷ 08:00 AM – 07:00 PM</span></div><button data-detail="student-lounge" type="button">View Details <span>→</span></button></article>
+<article class="facility-card" data-building="building-b" data-status="available" data-search="discussion room group study project building b"><div class="card-top"><span class="facility-icon">▧</span><span class="status available">Available</span></div><small>Study Space</small><h3>Discussion Room</h3><p>A room for student group study, project meetings and discussions.</p><div class="facility-meta"><span>⌖ Building B</span><span>◷ 09:00 AM – 06:00 PM</span></div><button data-detail="discussion-room" type="button">View Details <span>→</span></button></article>
+<article class="facility-card" data-building="building-c" data-status="unavailable" data-search="auditorium hall event performance building c"><div class="card-top"><span class="facility-icon">▤</span><span class="status unavailable">Unavailable</span></div><small>Events</small><h3>Auditorium</h3><p>Large venue for university events, ceremonies and student programs.</p><div class="facility-meta"><span>⌖ Building C</span><span>◷ 09:00 AM – 06:00 PM</span></div><button data-detail="auditorium" type="button">View Details <span>→</span></button></article>
+</div>
+<p class="facilities-empty" id="facilitiesEmpty" hidden>No facilities match your search or filters.</p>
+<p class="facilities-note">Sample frontend information only. Confirm facility names, locations, hours and live availability with your project team before final submission.</p>
+</section></main></div>
+<div class="facility-modal" id="facilityModal" hidden><div class="modal-backdrop" data-close></div><section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" type="button" aria-label="Close" data-close>×</button><small id="modalType">Facility</small><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-grid"><div><span>Building</span><strong id="modalBuilding"></strong></div><div><span>Operating Hours</span><strong id="modalHours"></strong></div><div><span>Availability</span><strong id="modalStatus"></strong></div><div><span>Facilities</span><strong id="modalFeatures"></strong></div></div><a class="reserve-link" href="reservations.html">Go to Reservations <span>→</span></a></section></div>
+<script src="js/student.js"></script><script src="js/facilities.js"></script>
+</body></html>
