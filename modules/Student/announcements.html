@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Flow | Announcements</title>
+  <link rel="stylesheet" href="../../Assets/css/common.css">
+  <link rel="stylesheet" href="css/student.css">
+  <link rel="stylesheet" href="css/announcements.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><h2>Campus Flow</h2><p>Student Portal</p></div>
+    <nav class="side-nav" aria-label="Student navigation">
+      <a class="nav-link" href="index.html">Dashboard</a>
+      <a class="nav-link active" href="announcements.html">Announcements</a>
+      <a class="nav-link" href="clubs.html">Clubs</a>
+      <a class="nav-link" href="events.html">Events</a>
+      <a class="nav-link" href="facilities-rooms.html">Facilities &amp; Rooms</a>
+      <a class="nav-link" href="reservations.html">Reservations</a>
+      <a class="nav-link" href="complaints.html">Complaints</a>
+      <a class="nav-link" href="lost-found.html">Lost &amp; Found</a>
+      <a class="nav-link profile-link" href="../../../common/profile.html">My profile</a>
+      <a class="nav-link logout-link" href="../../../index.html">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main-area">
+      <header class="topbar">
+        <h1>Student Dashboard</h1>
+        <div class="topbar-actions">
+          <button class="notification-button" id="notificationButton" type="button">Notifications</button>
+          <span class="role-badge">Student</span>
+          <div class="notification-popover" id="notificationPopover" hidden>
+            <h3>Notifications</h3>
+            <p>Registration for Tech Fest is Open</p>
+            <p>Campus maintenance schedule updated</p>
+            <p>Club membership applications are open</p>
+          </div>
+        </div>
+      </header>
+
+    <section class="dashboard-content announcements-content">
+      <div class="page-heading">
+        <h2>Campus Announcements</h2>
+        <p>Stay updated with the latest news and notices from your campus.</p>
+      </div>
+
+      <div class="announcement-tools">
+        <label class="search-box" for="announcementSearch">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="announcementSearch" placeholder="Search announcements...">
+        </label>
+        <select id="categoryFilter" aria-label="Filter announcements by category">
+          <option value="all">All Categories</option>
+          <option value="events">Events</option>
+          <option value="academic">Academic</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="clubs">Clubs</option>
+        </select>
+      </div>
+
+      <div class="announcement-list" id="announcementList">
+        <article class="announcement-card" data-category="events">
+          <div class="announcement-topline"><span class="announcement-category category-events">Events</span><time datetime="2026-11-17">17 Nov 2026</time></div>
+          <h3>Registration for Tech Fest is Open</h3>
+          <p>Registration is now open for the upcoming Tech Fest. Students interested in participating can check the event details and registration information.</p>
+          <a href="events.html" class="announcement-link">Explore Events <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="announcement-card" data-category="maintenance">
+          <div class="announcement-topline"><span class="announcement-category category-maintenance">Maintenance</span><time datetime="2026-11-15">15 Nov 2026</time></div>
+          <h3>Campus Maintenance Schedule Updated</h3>
+          <p>The campus maintenance schedule has been updated. Please check the latest information before planning to use campus facilities.</p>
+          <a href="facilities-rooms.html" class="announcement-link">View Facilities <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="announcement-card" data-category="clubs">
+          <div class="announcement-topline"><span class="announcement-category category-clubs">Clubs</span><time datetime="2026-11-12">12 Nov 2026</time></div>
+          <h3>Club Membership Applications Are Open</h3>
+          <p>Students can now explore campus clubs and review the available membership opportunities.</p>
+          <a href="clubs.html" class="announcement-link">Browse Clubs <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="announcement-card" data-category="academic">
+          <div class="announcement-topline"><span class="announcement-category category-academic">Academic</span><time datetime="2026-11-10">10 Nov 2026</time></div>
+          <h3>Academic Notice</h3>
+          <p>Please check the official university channels for the latest academic updates and instructions.</p>
+          <span class="announcement-link announcement-link-muted">Campus Notice</span>
+        </article>
+      </div>
+      <p class="empty-message" id="emptyMessage" hidden>No announcements match your search.</p>
+    </section>
+  </main>
+</div>
+<script src="../js/student.js"></script>
+<script src="../js/announcements.js"></script>
+</body>
+</html>

@@ -297,7 +297,6 @@ button, a {
   cursor: pointer;
 }
 
-/* Smaller screens: preserve the same visual style while stacking content. */
 @media (max-width: 850px) {
   .sidebar {
     width: 160px;

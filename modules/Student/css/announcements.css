@@ -1,0 +1,29 @@
+
+.announcements-content { min-height: calc(100vh - 56px); }
+.page-heading h2 { margin: 0 0 7px; color: var(--primary-color, #173B70); font-size: 17px; font-weight: 700; }
+.page-heading p { margin: 0; color: var(--secondary-text, #64748B); font-size: 10px; }
+.announcement-tools { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin: 25px 0 17px; }
+.search-box { width: min(360px, 100%); min-height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 12px; background: #fff; border: 1px solid #E2E8F0; border-radius: 6px; color: #64748B; }
+.search-box span { font-size: 19px; line-height: 1; }
+.search-box input { width: 100%; border: 0; outline: 0; color: #1F2937; background: transparent; font: inherit; font-size: 11px; }
+.announcement-tools select { min-height: 38px; min-width: 155px; padding: 0 11px; border: 1px solid #E2E8F0; border-radius: 6px; background: #fff; color: #475569; font-family: inherit; font-size: 10px; outline: none; }
+.announcement-list { display: grid; grid-template-columns: 1fr; gap: 13px; }
+.announcement-card { padding: 17px 19px; background: #fff; border: 1px solid #E2E8F0; border-radius: 7px; }
+.announcement-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 11px; }
+.announcement-category { display: inline-flex; align-items: center; min-height: 22px; padding: 3px 9px; border-radius: 4px; font-size: 9px; font-weight: 600; }
+.category-events { color: #2456B8; background: #EAF1FF; }
+.category-maintenance { color: #9A6500; background: #FFF5D9; }
+.category-clubs { color: #167447; background: #E7F7EF; }
+.category-academic { color: #7046A5; background: #F2EBFC; }
+.announcement-topline time { color: #8794A7; font-size: 9px; }
+.announcement-card h3 { margin: 0 0 8px; color: #173B70; font-size: 13px; font-weight: 700; }
+.announcement-card p { max-width: 850px; margin: 0 0 13px; color: #64748B; font-size: 10px; line-height: 1.7; }
+.announcement-link { display: inline-block; color: #2563EB; text-decoration: none; font-size: 10px; font-weight: 600; }
+.announcement-link:hover { text-decoration: underline; }
+.announcement-link-muted { color: #8794A7; cursor: default; }
+.empty-message { padding: 25px; text-align: center; color: #64748B; background: #fff; border: 1px solid #E2E8F0; border-radius: 7px; font-size: 11px; }
+@media (max-width: 620px) {
+  .announcement-tools { align-items: stretch; flex-direction: column; }
+  .search-box, .announcement-tools select { width: 100%; }
+  .announcement-card { padding: 15px; }
+}
