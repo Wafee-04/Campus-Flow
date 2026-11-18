@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Campus Flow</title>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/users.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>Campus Flow</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#"  class="active">User Management</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Clubs</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">Complaints</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="dashboard-container">
+        <header class="topbar">
+            <div class="topbar-left">
+                <h1>Dashboard</h1>
+                <p>Welcome to Campus Flow Administration</p>
+            </div>
+            
+            <div class="topbar-right">
+                <button class="notification-btn">Notifications</button>
+
+                <div class="admin-profile">
+                    <span>Admin</span>
+                </div>
+            </div>
+        </header>
+
+        
+<main class="main-content">
+
+    <section class="page-heading">
+        <div>
+            <h1>User Management</h1>
+            <p>Manage student, faculty, and staff accounts.</p>
+        </div>
+
+        <button class="btn-primary">+ Add New User</button>
+    </section>
+
+    <!-- User Statistics -->
+    <section class="user-stats">
+
+        <div class="user-stat-card">
+            <h3>Total Users</h3>
+            <p>1,250</p>
+        </div>
+
+        <div class="user-stat-card">
+            <h3>Students</h3>
+            <p>950</p>
+        </div>
+
+        <div class="user-stat-card">
+            <h3>Faculty</h3>
+            <p>220</p>
+        </div>
+
+        <div class="user-stat-card">
+            <h3>Staff</h3>
+            <p>80</p>
+        </div>
+
+    </section>
+
+    <!-- User Table Section -->
+    <section class="users-section">
+
+        <div class="users-toolbar">
+            <div class="toolbar-heading">
+                <h2>All Users</h2>
+                <p>View and manage registered accounts.</p>
+            </div>
+
+            <div class="users-filters">
+                <input
+                    type="text"
+                    placeholder="Search users..."
+                    id="userSearch"
+                >
+
+                <select id="roleFilter">
+                    <option value="">All Roles</option>
+                    <option value="Student">Student</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Administrator">Administrator</option>
+                    <option value="Maintenance Staff">Maintenance Staff</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="users-table">
+
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Rahim Ahmed</td>
+                        <td>rahim@student.aiub.edu</td>
+                        <td>Student</td>
+                        <td>CSE</td>
+                        <td><span class="status active">Active</span></td>
+                        <td><button class="action-btn">View</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sarah Khan</td>
+                        <td>sarah@aiub.edu</td>
+                        <td>Faculty</td>
+                        <td>CSE</td>
+                        <td><span class="status active">Active</span></td>
+                        <td><button class="action-btn">View</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tanvir Hasan</td>
+                        <td>tanvir@student.aiub.edu</td>
+                        <td>Student</td>
+                        <td>EEE</td>
+                        <td><span class="status inactive">Inactive</span></td>
+                        <td><button class="action-btn">View</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Imran Hossain</td>
+                        <td>imran@aiub.edu</td>
+                        <td>Maintenance Staff</td>
+                        <td>Administration</td>
+                        <td><span class="status active">Active</span></td>
+                        <td><button class="action-btn">View</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </section>
+
+</main>
+
+    </div>
+</body>
+</html>
