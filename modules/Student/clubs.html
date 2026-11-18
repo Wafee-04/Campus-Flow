@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Flow | Clubs</title>
+<link rel="stylesheet" href="../../Assets/css/common.css">
+<link rel="stylesheet" href="css/student.css">
+<link rel="stylesheet" href="css/clubs.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><h2>Campus Flow</h2><p>Student Portal</p></div>
+  <nav class="side-nav" aria-label="Student navigation">
+    <a class="nav-link" href="../index.html">Dashboard</a>
+    <a class="nav-link" href="announcements.html">Announcements</a>
+    <a class="nav-link active" href="clubs.html">Clubs</a>
+    <a class="nav-link" href="events.html">Events</a>
+    <a class="nav-link" href="facilities-rooms.html">Facilities &amp; Rooms</a>
+    <a class="nav-link" href="reservations.html">Reservations</a>
+    <a class="nav-link" href="complaints.html">Complaints</a>
+    <a class="nav-link" href="lost-found.html">Lost &amp; Found</a>
+    <a class="nav-link profile-link" href="../../../common/profile.html">My profile</a>
+    <a class="nav-link logout-link" href="../../../index.html">Logout</a>
+  </nav>
+</aside>
+<main class="main-area">
+<header class="topbar">
+  <h1>Clubs</h1>
+  <div class="topbar-actions">
+    <button class="notification-button" id="notificationButton" type="button">Notifications</button>
+    <span class="role-badge">Student</span>
+    <div class="notification-popover" id="notificationPopover" hidden>
+      <h3>Notifications</h3><p>Registration for Tech Fest is Open</p>
+      <p>Campus maintenance schedule updated</p><p>Club membership applications are open</p>
+    </div>
+  </div>
+</header>
+<section class="dashboard-content clubs-content">
+  <div class="clubs-heading">
+    <div><h2>Explore Campus Clubs</h2><p>Discover student communities and explore membership opportunities.</p></div>
+    <div class="membership-summary"><span>My Memberships</span><strong id="membershipCount">01</strong></div>
+  </div>
+  <div class="clubs-toolbar">
+    <label class="club-search" for="clubSearch"><span aria-hidden="true">⌕</span><input id="clubSearch" type="search" placeholder="Search clubs..."></label>
+    <select id="clubCategory" aria-label="Filter clubs by category">
+      <option value="all">All Categories</option><option value="technology">Technology</option>
+      <option value="cultural">Cultural</option><option value="sports">Sports</option><option value="social">Social</option>
+    </select>
+  </div>
+  <div class="clubs-grid">
+    <article class="club-card" data-category="technology" data-name="computer club">
+      <div class="club-card-top"><div class="club-symbol">CC</div><span class="club-category">Technology</span></div>
+      <h3>Computer Club</h3><p>A community for students interested in programming, technology, innovation and learning together.</p>
+      <div class="club-meta"><span>Technology &amp; Innovation</span><span>Open membership</span></div>
+      <div class="club-actions"><a href="club-details.html?club=computer" class="club-details-link">View Details</a><button class="join-button joined" data-joined="true" type="button">Joined</button></div>
+    </article>
+    <article class="club-card" data-category="cultural" data-name="cultural club">
+      <div class="club-card-top"><div class="club-symbol">Cu</div><span class="club-category">Cultural</span></div>
+      <h3>Cultural Club</h3><p>A place to participate in cultural activities, creative programs and campus celebrations.</p>
+      <div class="club-meta"><span>Arts &amp; Culture</span><span>Open membership</span></div>
+      <div class="club-actions"><a href="club-details.html?club=cultural" class="club-details-link">View Details</a><button class="join-button" data-joined="false" type="button">Join Club</button></div>
+    </article>
+    <article class="club-card" data-category="sports" data-name="sports club">
+      <div class="club-card-top"><div class="club-symbol">SC</div><span class="club-category">Sports</span></div>
+      <h3>Sports Club</h3><p>Connect with fellow students through sports activities, teamwork and recreational events.</p>
+      <div class="club-meta"><span>Sports &amp; Recreation</span><span>Open membership</span></div>
+      <div class="club-actions"><a href="club-details.html?club=sports" class="club-details-link">View Details</a><button class="join-button" data-joined="false" type="button">Join Club</button></div>
+    </article>
+    <article class="club-card" data-category="social" data-name="volunteer club">
+      <div class="club-card-top"><div class="club-symbol">VC</div><span class="club-category">Social</span></div>
+      <h3>Volunteer Club</h3><p>Take part in student-led initiatives, volunteering activities and community engagement.</p>
+      <div class="club-meta"><span>Community Service</span><span>Open membership</span></div>
+      <div class="club-actions"><a href="club-details.html?club=volunteer" class="club-details-link">View Details</a><button class="join-button" data-joined="false" type="button">Join Club</button></div>
+    </article>
+  </div>
+  <p class="clubs-empty" id="clubsEmpty" hidden>No clubs match your search.</p>
+  <p class="clubs-note">Club names and descriptions are sample frontend content. Replace them with information approved by your project team.</p>
+</section>
+</main></div>
+<script src="js/student.js"></script><script src="js/clubs.js"></script>
+</body></html>

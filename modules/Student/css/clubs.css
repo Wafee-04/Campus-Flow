@@ -1,0 +1,26 @@
+.clubs-content{min-height:calc(100vh - 56px)}
+.clubs-heading{display:flex;justify-content:space-between;align-items:center;gap:18px}
+.clubs-heading h2{margin:0 0 7px;color:var(--primary-color,#173B70);font-size:17px;font-weight:700}
+.clubs-heading p{margin:0;color:var(--secondary-text,#64748B);font-size:10px}
+.membership-summary{min-width:145px;padding:10px 14px;display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid #E2E8F0;border-radius:7px}
+.membership-summary span{color:#64748B;font-size:9px}.membership-summary strong{color:#173B70;font-size:20px;line-height:1.3}
+.clubs-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:24px 0 17px}
+.club-search{width:min(360px,100%);min-height:38px;display:flex;align-items:center;gap:9px;padding:0 12px;background:#fff;border:1px solid #E2E8F0;border-radius:6px;color:#64748B}
+.club-search span{font-size:19px;line-height:1}.club-search input{width:100%;border:0;outline:0;background:transparent;color:#1F2937;font:inherit;font-size:11px}
+.clubs-toolbar select{min-height:38px;min-width:155px;padding:0 11px;border:1px solid #E2E8F0;border-radius:6px;background:#fff;color:#475569;font-family:inherit;font-size:10px}
+.clubs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.club-card{padding:17px 18px;background:#fff;border:1px solid #E2E8F0;border-radius:7px}
+.club-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.club-symbol{width:39px;height:39px;display:grid;place-items:center;border-radius:7px;background:#EAF1FF;color:#173B70;font-size:13px;font-weight:700}
+.club-category{padding:4px 9px;border-radius:4px;background:#F1F5F9;color:#64748B;font-size:9px;font-weight:600}
+.club-card h3{margin:0 0 7px;color:#173B70;font-size:13px;font-weight:700}
+.club-card p{min-height:48px;margin:0 0 14px;color:#64748B;font-size:10px;line-height:1.7}
+.club-meta{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-top:1px solid #EEF2F7;color:#8794A7;font-size:9px}
+.club-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px}
+.club-details-link{color:#2563EB;text-decoration:none;font-size:10px;font-weight:600}.club-details-link:hover{text-decoration:underline}
+.join-button{min-width:94px;padding:8px 12px;border:1px solid #2563EB;border-radius:5px;background:#2563EB;color:#fff;font-size:10px;font-weight:600}
+.join-button.joined{background:#fff;color:#173B70;border-color:#CBD5E1}
+.clubs-empty{padding:25px;text-align:center;color:#64748B;background:#fff;border:1px solid #E2E8F0;border-radius:7px;font-size:11px}
+.clubs-note{margin-top:16px;color:#8794A7;font-size:9px}
+@media(max-width:760px){.clubs-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.clubs-heading,.clubs-toolbar{align-items:stretch;flex-direction:column}.membership-summary,.club-search,.clubs-toolbar select{width:100%}}
