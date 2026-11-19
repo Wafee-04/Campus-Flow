@@ -92,19 +92,25 @@
             </div>
 
             <div class="users-filters">
-                <input
+                <div class="search-box">
+                    <input
                     type="text"
                     placeholder="Search users..."
                     id="userSearch"
                 >
+                </div>
 
-                <select id="roleFilter">
-                    <option value="">All Roles</option>
-                    <option value="Student">Student</option>
-                    <option value="Faculty">Faculty</option>
-                    <option value="Administrator">Administrator</option>
-                    <option value="Maintenance Staff">Maintenance Staff</option>
-                </select>
+                <div class="filter-box">
+                    <select id="roleFilter">
+                        <option value="">All Roles</option>
+                        <option value="Student">Student</option>
+                        <option value="Faculty">Faculty</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="Maintenance Staff">Maintenance Staff</option>
+                    </select>
+                </div>
+
+                
             </div>
         </div>
 
@@ -122,7 +128,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody id="userTableBody">
 
                     <tr>
                         <td>Rahim Ahmed</td>
@@ -167,8 +173,40 @@
 
     </section>
 
+    <div class="modal-overlay" id="userModal">
+        <div class="user-modal">
+            <div class="modal-header">
+                <h2>User Details</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+                
+            </div>
+
+            <div class="modal-body">
+                <div class="detail-row">
+                    <span>Full Name</span>
+                    <strong id="modalName"></strong>
+                </div>
+                <div class="detail-row">
+                    <span>Role</span>
+                    <strong id="modalRole"></strong>
+                </div>
+                <div class="modal-row">
+                    <span>Department</span>
+                    <strong id="modalDepartment"></strong>
+                </div>
+                <div class="detail-row">
+                    <span>Account Status</span>
+                    <strong id="modalStatus"></strong>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" id="doneModal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
     </div>
+    <script src="../../assets/js/users.js"></script>
 </body>
 </html>
