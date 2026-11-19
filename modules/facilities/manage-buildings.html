@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Buildings - Campus Flow</title>
+    <link rel="stylesheet" href="../../Assets/css/common.css">
+    <link rel="stylesheet" href="../../Assets/css/facilities.css">
+</head>
+
+<body>
+    <div class="facilities-layout">
+
+        <header class="facilities-navbar">
+            <span class="facilities-navbar-brand">Campus Flow</span>
+            <span class="facilities-navbar-title">Manage Buildings</span>
+            <span class="facilities-navbar-user">Demo User</span>
+        </header>
+
+        <aside class="facilities-sidebar">
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="buildings.html" class="active">Buildings</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </aside>
+
+        <main class="facilities-content">
+            <div class="facilities-page-header">
+                <h1>Manage Buildings</h1>
+                <a class="facilities-button facilities-button-secondary" href="buildings.html">Back to Buildings</a>
+            </div>
+
+            <div class="facilities-card">
+                <h2 id="formTitle">Add Building</h2>
+                <p class="facilities-note">Demo only. Changes are lost when the page is refreshed.</p>
+                <div id="formMessage"></div>
+
+                <form id="buildingForm" class="facilities-form" novalidate>
+                    <div class="facilities-form-group">
+                        <label for="buildingId">Building ID</label>
+                        <input type="text" id="buildingId" placeholder="Created automatically" readonly>
+                    </div>
+
+                    <div class="facilities-form-group">
+                        <label for="buildingName">Building Name</label>
+                        <input type="text" id="buildingName">
+                    </div>
+
+                    <div class="facilities-form-group">
+                        <label for="buildingLocation">Location</label>
+                        <input type="text" id="buildingLocation" value="AIUB Main Campus, Kuratoli, Dhaka">
+                    </div>
+
+                    <div class="facilities-form-group">
+                        <label for="buildingFloors">Floors</label>
+                        <input type="number" id="buildingFloors" min="1">
+                    </div>
+
+                    <div class="facilities-form-group">
+                        <label for="buildingTotalRooms">Total Rooms</label>
+                        <input type="number" id="buildingTotalRooms" min="0" value="0">
+                    </div>
+
+                    <div class="facilities-form-group">
+                        <label for="buildingStatus">Status</label>
+                        <select id="buildingStatus">
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="facilities-form-group full-width">
+                        <label for="buildingDescription">Description</label>
+                        <textarea id="buildingDescription"></textarea>
+                    </div>
+
+                    <div class="facilities-form-actions">
+                        <button type="submit" class="facilities-button">Save Building</button>
+                        <button type="button" id="cancelButton"
+                            class="facilities-button facilities-button-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="facilities-card">
+                <h2>All Buildings</h2>
+                <div class="facilities-table-wrapper">
+                    <table class="facilities-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Building Name</th>
+                                <th>Location</th>
+                                <th>Floors</th>
+                                <th>Total Rooms</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="manageTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="../../Assets/js/buildings.js"></script>
+</body>
+
+</html>
