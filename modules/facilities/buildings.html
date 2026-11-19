@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildings - Campus Flow</title>
+    <link rel="stylesheet" href="../../Assets/css/common.css">
+    <link rel="stylesheet" href="../../Assets/css/facilities.css">
+</head>
+
+<body>
+    <div class="facilities-layout">
+
+        <header class="facilities-navbar">
+            <span class="facilities-navbar-brand">Campus Flow</span>
+            <span class="facilities-navbar-title">Buildings</span>
+            <span class="facilities-navbar-user">Demo User</span>
+        </header>
+
+        <aside class="facilities-sidebar">
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="buildings.html" class="active">Buildings</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </aside>
+
+        <main class="facilities-content">
+            <div class="facilities-page-header">
+                <h1>Buildings</h1>
+                <a class="facilities-button" href="manage-buildings.html">Manage Buildings</a>
+            </div>
+
+            <div class="facilities-card">
+                <div class="facilities-toolbar">
+                    <label for="searchInput" class="facilities-note">Search:</label>
+                    <input type="text" id="searchInput" placeholder="Search by ID, name or location">
+                </div>
+
+                <div class="facilities-table-wrapper">
+                    <table class="facilities-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Building Name</th>
+                                <th>Location</th>
+                                <th>Floors</th>
+                                <th>Total Rooms</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="buildingsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="../../Assets/js/buildings.js"></script>
+</body>
+
+</html>
